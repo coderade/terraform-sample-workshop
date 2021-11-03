@@ -50,12 +50,27 @@ We are going to deploy our first stack using a simple **one file snippet** of Te
 </p>
 
 
-**ALL THE COMMANDS WILL NEED TO BE RUN INSIDE one_file_tf/simple_nginx_stack/**
+#### Install Terraform
+
+Download and install Terraform:
+
+```bash
+wget https://releases.hashicorp.com/terraform/0.13.4/terraform_0.13.4_linux_amd64.zip
+unzip terraform_0.13.4_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+export PATH=$PATH:/usr/local/bin/terraform
+```
 
 Execute:
 
 ```shell
-cd one_file_tf/simple_nginx_stack/
+
+mv terraform-sample-workshop/module_1/one_file_tf/simple_nginx_stack/ .
+
+rm -rf terraform-sample-workshop/
+
+cd simple_nginx_stack/
+
 ```
 
 Now we need to change the **AWS Bucket** where out Terraform State will be saved. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
