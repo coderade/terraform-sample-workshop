@@ -61,6 +61,10 @@ sudo mv terraform /usr/local/bin/
 export PATH=$PATH:/usr/local/bin/terraform
 ```
 
+Check if Terraform is running properly
+
+    terraform version
+
 Execute:
 
 ```shell
