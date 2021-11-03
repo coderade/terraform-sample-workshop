@@ -64,6 +64,11 @@ export PATH=$PATH:/usr/local/bin/terraform
 Check if Terraform is running properly
 
     terraform version
+    
+    
+Clone this repository:
+
+    git clone https://github.com/coderade/terraform-sample-workshop.git
 
 Execute:
 
@@ -80,6 +85,11 @@ cd simple_nginx_stack/
 Now we need to change the **AWS Bucket** where out Terraform State will be saved. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures.
 
 If you don't have a bucket in AWS create one, [How to Create AWS Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+
+
+To create a S3 bucket using the cli:
+
+    aws s3api create-bucket --bucket my-bucket --region us-east-1
 
 Open **one_file_tf/simple_nginx_stack/main.tf** and do the following:
 
